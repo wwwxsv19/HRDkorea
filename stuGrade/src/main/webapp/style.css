@@ -1,0 +1,46 @@
+header, nav, section, footer {
+	position : fixed;
+	width : 100%;
+}
+
+header, footer {
+	height : 40px;
+	background-color : orange; color : black;
+	text-align : center; font-size : 30px;
+	
+}
+
+header {
+	top : 0px;
+}
+
+footer {
+	bottom : 0px;	
+}
+
+nav {
+	top : 40px; height : 30px; 	padding-left : 20px;
+	background-color : lightpink;
+}
+
+nav > a {
+	padding-right : 20px;	
+}
+
+section {
+	top : 70px; height : 100%;
+	background-color : lightgray; color : black;
+	padding-left : 20px;
+}
+
+section > h1 {
+	text-align : center;
+}
+
+td {
+	text-align : center;
+}
+
+table {
+	margin : 0px auto;
+}
