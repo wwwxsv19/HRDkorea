@@ -140,7 +140,7 @@
              Note: The pattern used is equivalent to using pattern="common" -->
         <Valve className="org.apache.catalina.valves.AccessLogValve" directory="logs" pattern="%h %l %u %t &quot;%r&quot; %s %b" prefix="localhost_access_log" suffix=".txt"/>
 
-      <Context docBase="C:\hrdkorea\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\ROOT" path="" reloadable="false"/><Context docBase="C:\hrdkorea\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\audition" path="/audition" reloadable="true" source="org.eclipse.jst.jee.server:audition"/><Context docBase="C:\hrdkorea\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\bookSeat" path="/bookSeat" reloadable="true" source="org.eclipse.jst.jee.server:bookSeat"/><Context docBase="C:\hrdkorea\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\EmbSW" path="/EmbSW" reloadable="true" source="org.eclipse.jst.jee.server:EmbSW"/></Host>
+      <Context docBase="C:\hrdkorea\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\ROOT" path="" reloadable="false"/><Context docBase="C:\hrdkorea\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\audition" path="/audition" reloadable="true" source="org.eclipse.jst.jee.server:audition"/><Context docBase="C:\hrdkorea\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\bookSeat" path="/bookSeat" reloadable="true" source="org.eclipse.jst.jee.server:bookSeat"/><Context docBase="C:\hrdkorea\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\stuGard" path="/stuGard" reloadable="true" source="org.eclipse.jst.jee.server:stuGard"/></Host>
     </Engine>
   </Service>
 </Server>
