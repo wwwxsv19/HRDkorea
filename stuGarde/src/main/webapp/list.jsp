@@ -25,7 +25,7 @@
 		<% 
 			request.setCharacterEncoding("UTF-8");
 			try {
-				String query = "select stuid, sname, jumin, deptName, phone, email from student";
+				String query = "select stuid, sname, jumin, deptName, phone, email from stuInfor";
 				PreparedStatement pstmt = conn.prepareStatement(query);
 				ResultSet rs = pstmt.executeQuery();
 				

@@ -20,7 +20,7 @@
 	String etc = request.getParameter("etc");
 	
 	try {
-		String query = "insert into score values(?, ?, ?, ?, ?, ?, ?)";
+		String query = "insert into scoreInfor values(?, ?, ?, ?, ?, ?, ?)";
 		PreparedStatement pstmt = conn.prepareStatement(query);
 		
 		pstmt.setString(1, id);

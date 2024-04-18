@@ -31,12 +31,12 @@
 		<% 
 			request.setCharacterEncoding("UTF-8");
 			try {
-				String query = "select student.stuid, sname, subname, score.subcode, proname, midscore, finalscore, attend, report, etc, "
+				String query = "select stuInfor.stuid, sname, subname, scoreInfor.subcode, proname, midscore, finalscore, attend, report, etc, "
 						+ "to_char((midscore+finalscore+attend+report+etc)/5, '999'), "
 						+ "to_char(midscore*0.3 + finalscore*0.3 + attend*0.2 + report*0.1 + etc*0.1, '999.0'), "
 						+ "midscore*0.3 + finalscore*0.3 + attend*0.2 + report*0.1 + etc*0.1 "
-						+ "from student, score, subject "
-						+ "where student.stuid = score.sid and score.subcode = subject.subcode "
+						+ "from stuInfor, scoreInfor, subInfor "
+						+ "where stuInfor.stuid = scoreInfor.sid and scoreInfor.subcode = subInfor.subcode "
 						+ "order by sname";
 				PreparedStatement pstmt = conn.prepareStatement(query);
 				ResultSet rs = pstmt.executeQuery();

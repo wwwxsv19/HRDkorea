@@ -40,11 +40,11 @@
 			request.setCharacterEncoding("UTF-8");
 			String code = request.getParameter("code");
 			try {
-				String query = "select student.stuid, sname, deptName, subject.subname, midscore, finalscore, attend, report, etc, "
+				String query = "select stuInfor.stuid, sname, deptName, subInfor.subname, midscore, finalscore, attend, report, etc, "
 						+ "to_char(midscore*0.3 + finalscore*0.3 + attend*0.2 + report*0.1 + etc*0.1, '999.0'), "
 						+ "(midscore*0.3 + finalscore*0.3 + attend*0.2 + report*0.1 + etc*0.1) "
-						+ "from student, score, subject "
-						+ "where student.stuid = score.sid and score.subcode = subject.subcode and subject.subcode = ?";
+						+ "from stuInfor, scoreInfor, subInfor "
+						+ "where stuInfor.stuid = scoreInfor.sid and scoreInfor.subcode = subInfor.subcode and subInfor.subcode = ?";
 				PreparedStatement pstmt = conn.prepareStatement(query);
 				pstmt.setString(1, code);
 				ResultSet rs = pstmt.executeQuery();
