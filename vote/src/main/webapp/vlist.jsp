@@ -26,7 +26,7 @@
 			<%
 			request.setCharacterEncoding("UTF-8");
 			try {
-				String query = "select vName, vJumin, mNo, vTime, vConfirm from vote";
+				String query = "select vName, vJumin, mNo, vTime, vConfirm from vote where vArea = '제1투표장'";
 				PreparedStatement pstmt = conn.prepareStatement(query);
 				ResultSet rs = pstmt.executeQuery();
 				
