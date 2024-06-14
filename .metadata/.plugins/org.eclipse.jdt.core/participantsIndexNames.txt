@@ -15,5 +15,7 @@ C:\hrdkorea\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2829525070.ind
 \EmbSW\src\main\java
 C:\hrdkorea\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\47707095.index
 \warehouse\src\main\java
+C:\hrdkorea\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2427535615.index
+\lotte\src\main\java
 C:\hrdkorea\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3933789575.index
 \stuGard\src\main\java
