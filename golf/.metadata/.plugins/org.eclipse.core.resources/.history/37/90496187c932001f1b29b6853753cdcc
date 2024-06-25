@@ -1,0 +1,66 @@
+<%@ include file="db.jsp" %>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>info</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<script type="text/javascript" src="check.js"></script>
+<jsp:include page="header.jsp"></jsp:include>
+<section>
+	<h1>강사 조회</h1>
+	<table border=1>
+		<tr>
+			<td>수강월</td>
+			<td>회원번호</td>
+			<td>회원명</td>
+			<td>강의명</td>
+			<td>강의장소</td>
+			<td>수강료</td>
+			<td>등급</td>
+		</tr>
+		<%
+		
+		request.setCharacterEncoding("UTF-8");
+		
+		try {
+			String query = "select month, mno, mname, cname, area, cost, grade "
+						+ "from coach natural join member natural join class";
+			PreparedStatement pstmt = conn.prepareStatement(query);
+			ResultSet rs = pstmt.executeQuery();
+			
+			while(rs.next()) {
+				String mt = rs.getString(1);
+				String month = mt.substring(0, 4) + "년" + mt.substring(4, 6) + "월";
+				
+				String ct = rs.getString(6);
+				String cost = "￦" + ct.substring(0, 3) + "," + ct.substring(3, 6);
+				%>
+				
+				<tr>
+					<td><%= month %></td>
+					<td><%= rs.getString(2) %></td>
+					<td><%= rs.getString(3) %></td>
+					<td><%= rs.getString(4) %></td>
+					<td><%= rs.getString(5) %></td>
+					<td><%= cost %></td>
+					<td><%= rs.getString(7) %></td>
+				</tr>
+				
+				<%
+			}
+			
+		} catch(Exception e) {
+			e.printStackTrace();
+		}
+		
+		%>
+	</table>
+</section>
+<jsp:include page="footer.jsp"></jsp:include>
+</body>
+</html>

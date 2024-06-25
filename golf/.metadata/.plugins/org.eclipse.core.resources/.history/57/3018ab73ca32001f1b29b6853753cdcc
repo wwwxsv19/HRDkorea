@@ -1,0 +1,65 @@
+<%@ include file="db.jsp" %>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>insert</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<script type="text/javascript" src="check.js"></script>
+<jsp:include page="header.jsp"></jsp:include>
+<section>
+	<h1>수강 신청</h1>
+	<form name="frm" action="action.jsp" method="get">
+		<table border=1>
+			<tr>
+				<td>수강월</td>
+				<td>
+					<input type="text" name="month">2022년 03월 예)202203
+				</td>
+			</tr>
+			<tr>
+				<td>회원명</td>
+				<td>
+					<input type="text" name="month">2022년 03월 예)202203
+				</td>
+			</tr>
+			<tr>
+				<td>회원 번호</td>
+				<td>
+					<input type="text" name="month">2022년 03월 예)202203
+				</td>
+			</tr>
+			<tr>
+				<td>강의 장소</td>
+				<td>
+					<input type="text" name="month">2022년 03월 예)202203
+				</td>
+			</tr>
+			<tr>
+				<td>강의명</td>
+				<td>
+					<input type="text" name="month">2022년 03월 예)202203
+				</td>
+			</tr>
+			<tr>
+				<td>수강료</td>
+				<td>
+					<input type="text" name="month">2022년 03월 예)202203
+				</td>
+			</tr>
+			<tr>
+				<td colspan=2>
+					<input type="button" value="수강 신청" onclick="check()">
+					<input type="button" value="다시 쓰기" onclick="res()">
+				</td>
+			</tr>
+		</table>
+	</form>
+</section>
+<jsp:include page="footer.jsp"></jsp:include>
+</body>
+</html>

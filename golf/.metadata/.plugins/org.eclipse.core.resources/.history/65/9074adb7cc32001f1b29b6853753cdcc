@@ -1,0 +1,49 @@
+function check() {
+	if(frm.month.value.length == 0) {
+		alert("수강월이 입력되지 않았습니다!");
+		frm.month.focus();
+		return false;
+	}
+	
+	if(frm.mname.value.length == 0) {
+		alert("회원명이 선택되지 않았습니다!");
+		frm.mname.focus();
+		return false;
+	}
+	
+	if(frm.area.value.length == 0) {
+		alert("강의 장소가 선택되지 않았습니다!");
+		frm.area.focus();
+		return false;
+	}
+	
+	if(frm.code.value.length == 0) {
+		alert("강의명이 선택되지 않았습니다!");
+		frm.code.focus();
+		return false;
+	}
+	
+	alert("수강 신청이 정상적으로 완료되었습니다!");
+	document.frm.submit();
+	return true;
+}
+
+function res() {
+	alert("정보를 지우고 처음부터 다시 입력합니다!");
+	document.frm.reset();
+}
+
+var a;
+
+function setNo(mname) {
+	document.getElementById("mno").value = mname;
+	a = int(mname);
+}
+
+function setCost(code) {
+	if(a >= 20000) {
+		document.getElementById("cost").value = (code*1000)/2;
+	} else {
+		document.getElementById("cost").value = (code*1000);
+	}
+}

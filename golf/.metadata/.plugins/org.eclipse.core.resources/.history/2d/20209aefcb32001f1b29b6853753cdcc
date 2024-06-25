@@ -1,0 +1,32 @@
+function check() {
+	if(frm.month.value.length == 0) {
+		alert("수강월이 입력되지 않았습니다!");
+		frm.month.focus();
+		return false;
+	}
+	
+	if(frm.mname.value.length == 0) {
+		alert("회원명이 선택되지 않았습니다!");
+		frm.mname.focus();
+		return false;
+	}
+	
+	if(frm.area.value.length == 0) {
+		alert("강의 장소가 선택되지 않았습니다!");
+		frm.area.focus();
+		return false;
+	}
+	
+	if(frm.month.value.length == 0) {
+		alert("수강월이 입력되지 않았습니다!");
+		frm.month.focus();
+		return false;
+	}
+	
+	if(frm.month.value.length == 0) {
+		alert("수강월이 입력되지 않았습니다!");
+		frm.month.focus();
+		return false;
+	}
+	
+}

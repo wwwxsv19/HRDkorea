@@ -1,0 +1,93 @@
+<%@ include file="db.jsp" %>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>insert</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<script type="text/javascript" src="check.js"></script>
+<jsp:include page="header.jsp"></jsp:include>
+<section>
+	<h1>수강 신청</h1>
+	<form name="frm" action="action.jsp" method="get">
+		<table border=1>
+			<tr>
+				<td>수강월</td>
+				<td>
+					<input type="text" name="month">2022년 03월 예)202203
+				</td>
+			</tr>
+			<tr>
+				<td>회원명</td>
+				<td>
+					<select name="mname" onchange="getValue(this.value)">
+						<%
+						request.setCharacterEncoding("UTF-8");
+						try {
+							PreparedStatement pstmt = conn.prepareStatement("select mno, mname from member");
+							ResultSet rs = pstmt.executeQuery();
+							while(rs.next()) {
+								%>
+								<option value="<%= rs.getString(1) %>"><%= rs.getString(2) %></option>
+								<%
+							}
+						} catch(Exception e) {
+							e.printStackTrace();
+						}
+						%>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<td>회원 번호</td>
+				<td>
+					<input type="text" id="mno" name="mno" readonly>예)10001
+				</td>
+			</tr>
+			<tr>
+				<td>강의 장소</td>
+				<td>
+					<select name="area">
+						<option value="">강의 장소</option>
+						<option value="서울본원">서울본원</option>
+						<option value="성남분원">성남분원</option>
+						<option value="대전분원">대전분원</option>
+						<option value="부산분원">부산분원</option>
+						<option value="대구분원">대구분원</option>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<td>강의명</td>
+				<td>
+					<select name="code">
+						<option value="">강의명</option>
+						<option value="100">초급반</option>
+						<option value="200">중급반</option>
+						<option value="300">고급반</option>
+						<option value="400">심화반</option>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<td>수강료</td>
+				<td>
+					<input type="text" id="cost" name="cost" readonly>원
+				</td>
+			</tr>
+			<tr>
+				<td colspan=2>
+					<input type="button" value="수강 신청" onclick="check()">
+					<input type="button" value="다시 쓰기" onclick="res()">
+				</td>
+			</tr>
+		</table>
+	</form>
+</section>
+<jsp:include page="footer.jsp"></jsp:include>
+</body>
+</html>
