@@ -1,0 +1,44 @@
+header {
+	position : fixed; top : 0px;
+	width : 100%; height : 50px;
+	background-color : orange; color : black;
+	font-size : 28px; text-align : center;
+}
+
+nav {
+	position : fixed; top : 50px;
+	width : 100%; height : 30px;
+	background-color : pink;
+	font-size : 18px; 
+}
+
+nav > a {
+	padding : 0px 10px;
+	color : black;
+}
+
+section {
+	position : fixed; top : 80px;
+	width : 100%; height : 100%;
+	background-color : lightgray; color : black;
+}
+
+section > h1 {
+	text-align : center;
+}
+
+table {
+	margin : 0px auto;
+}
+
+table > * {
+	text-align : center;
+}
+
+footer {
+	position : fixed; bottom : 0px;
+	width : 100%; height : 30px;
+	background-color : orange; color : black;
+	font-size : 18px; text-align : center;
+}
+

@@ -13,8 +13,12 @@ C:\hrdkorea\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1395686759.ind
 \bookSeat\src\main\java
 C:\hrdkorea\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2829525070.index
 \EmbSW\src\main\java
+C:\hrdkorea\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3514776836.index
+\lotte0626\src\main\java
 C:\hrdkorea\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\47707095.index
 \warehouse\src\main\java
+C:\hrdkorea\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3334239469.index
+\vaccine\src\main\java
 C:\hrdkorea\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2427535615.index
 \lotte\src\main\java
 C:\hrdkorea\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3933789575.index

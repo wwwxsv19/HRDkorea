@@ -3,9 +3,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8">
 </head>
 <body>
-	<footer>부산소마고 정처기 모의고사 by teacher PJH</footer>
+<footer>HRDKOREA</footer>
 </body>
 </html>
